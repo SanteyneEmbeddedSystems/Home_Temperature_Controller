@@ -5,90 +5,6 @@
   <Description />
   <Packages>
     <Package>
-      <Name>Mode_Manager</Name>
-      <Identifier>2281d864-cf97-4644-a16a-ada4bc88be80</Identifier>
-      <Description />
-      <Packages />
-      <Types>
-        <Enumerated_Type>
-          <Name>E_HTC_Mode</Name>
-          <Identifier>bdfad7ad-83c7-4b56-b5c2-242ab2884598</Identifier>
-          <Description />
-          <Enumerals>
-            <Enumeral>
-              <Name>NORMAL_MODE</Name>
-              <Identifier>4a7068f0-383e-4f1c-9365-812e5e8e0d17</Identifier>
-              <Description />
-            </Enumeral>
-            <Enumeral>
-              <Name>HIGH_MODE</Name>
-              <Identifier>08b157d3-1990-424a-9af2-d3eacb52a66b</Identifier>
-              <Description />
-            </Enumeral>
-            <Enumeral>
-              <Name>LOW_MODE</Name>
-              <Identifier>8e875919-8cf0-4e65-b500-4965cd001902</Identifier>
-              <Description />
-            </Enumeral>
-            <Enumeral>
-              <Name>HOMEDAY_MODE</Name>
-              <Identifier>41220a49-13c1-45c5-bbb7-91a12805eeae</Identifier>
-              <Description />
-            </Enumeral>
-          </Enumerals>
-        </Enumerated_Type>
-      </Types>
-      <Interfaces>
-        <Client_Server_Interface>
-          <Name>HTC_Mode</Name>
-          <Identifier>467e286c-3acd-4b6d-b479-82c076de862a</Identifier>
-          <Description />
-          <Operations>
-            <Client_Server_Operation>
-              <Name>Get_Operating_Mode</Name>
-              <Identifier>0fa4f934-2748-4f88-8cf9-d4ccf54c2287</Identifier>
-              <Description />
-              <Parameters>
-                <Operation_Parameter>
-                  <Name>mode</Name>
-                  <Identifier>eb0761c4-2fa9-4518-b032-1f6df5e4ea67</Identifier>
-                  <Description />
-                  <Referenced_Type_Id>bdfad7ad-83c7-4b56-b5c2-242ab2884598</Referenced_Type_Id>
-                  <Direction>OUTPUT</Direction>
-                </Operation_Parameter>
-              </Parameters>
-            </Client_Server_Operation>
-          </Operations>
-        </Client_Server_Interface>
-      </Interfaces>
-      <Component_Types>
-        <Component_Type>
-          <Name>Mode_Manager_Class</Name>
-          <Identifier>747a08cb-327b-468f-a5f3-cd49faac5b7f</Identifier>
-          <Description />
-          <Configurations />
-          <Operations />
-          <Provider_Ports>
-            <Provider_Port>
-              <Name>Operating_Mode</Name>
-              <Identifier>e14c369b-5c14-4240-973c-3978708715d8</Identifier>
-              <Description />
-              <Referenced_Interface_Id>467e286c-3acd-4b6d-b479-82c076de862a</Referenced_Interface_Id>
-            </Provider_Port>
-          </Provider_Ports>
-          <Requirer_Ports>
-            <Requirer_Port>
-              <Name>Mode_Button_Pressed</Name>
-              <Identifier>e57afd09-2b9d-49b3-bd01-489cb56aec88</Identifier>
-              <Description />
-              <Referenced_Interface_Id>36530ec3-3e15-4e02-a253-2e472d582bd7</Referenced_Interface_Id>
-            </Requirer_Port>
-          </Requirer_Ports>
-        </Component_Type>
-      </Component_Types>
-      <Compositions />
-    </Package>
-    <Package>
       <Name>Setting_Manager</Name>
       <Identifier>55d51e71-ba1a-4269-9f0e-5d9399e89484</Identifier>
       <Description />
@@ -206,6 +122,90 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
             <Requirer_Port>
               <Name>Previous_Setting_Button_Pressed</Name>
               <Identifier>1045042c-0cc6-4c20-98c5-5e28353b5633</Identifier>
+              <Description />
+              <Referenced_Interface_Id>36530ec3-3e15-4e02-a253-2e472d582bd7</Referenced_Interface_Id>
+            </Requirer_Port>
+          </Requirer_Ports>
+        </Component_Type>
+      </Component_Types>
+      <Compositions />
+    </Package>
+    <Package>
+      <Name>Mode_Manager</Name>
+      <Identifier>2281d864-cf97-4644-a16a-ada4bc88be80</Identifier>
+      <Description />
+      <Packages />
+      <Types>
+        <Enumerated_Type>
+          <Name>E_HTC_Mode</Name>
+          <Identifier>bdfad7ad-83c7-4b56-b5c2-242ab2884598</Identifier>
+          <Description />
+          <Enumerals>
+            <Enumeral>
+              <Name>NORMAL_MODE</Name>
+              <Identifier>4a7068f0-383e-4f1c-9365-812e5e8e0d17</Identifier>
+              <Description />
+            </Enumeral>
+            <Enumeral>
+              <Name>HIGH_MODE</Name>
+              <Identifier>08b157d3-1990-424a-9af2-d3eacb52a66b</Identifier>
+              <Description />
+            </Enumeral>
+            <Enumeral>
+              <Name>LOW_MODE</Name>
+              <Identifier>8e875919-8cf0-4e65-b500-4965cd001902</Identifier>
+              <Description />
+            </Enumeral>
+            <Enumeral>
+              <Name>HOMEDAY_MODE</Name>
+              <Identifier>41220a49-13c1-45c5-bbb7-91a12805eeae</Identifier>
+              <Description />
+            </Enumeral>
+          </Enumerals>
+        </Enumerated_Type>
+      </Types>
+      <Interfaces>
+        <Client_Server_Interface>
+          <Name>HTC_Mode</Name>
+          <Identifier>467e286c-3acd-4b6d-b479-82c076de862a</Identifier>
+          <Description />
+          <Operations>
+            <Client_Server_Operation>
+              <Name>Get_Operating_Mode</Name>
+              <Identifier>0fa4f934-2748-4f88-8cf9-d4ccf54c2287</Identifier>
+              <Description />
+              <Parameters>
+                <Operation_Parameter>
+                  <Name>mode</Name>
+                  <Identifier>eb0761c4-2fa9-4518-b032-1f6df5e4ea67</Identifier>
+                  <Description />
+                  <Referenced_Type_Id>bdfad7ad-83c7-4b56-b5c2-242ab2884598</Referenced_Type_Id>
+                  <Direction>OUTPUT</Direction>
+                </Operation_Parameter>
+              </Parameters>
+            </Client_Server_Operation>
+          </Operations>
+        </Client_Server_Interface>
+      </Interfaces>
+      <Component_Types>
+        <Component_Type>
+          <Name>Mode_Manager_Class</Name>
+          <Identifier>747a08cb-327b-468f-a5f3-cd49faac5b7f</Identifier>
+          <Description />
+          <Configurations />
+          <Operations />
+          <Provider_Ports>
+            <Provider_Port>
+              <Name>Operating_Mode</Name>
+              <Identifier>e14c369b-5c14-4240-973c-3978708715d8</Identifier>
+              <Description />
+              <Referenced_Interface_Id>467e286c-3acd-4b6d-b479-82c076de862a</Referenced_Interface_Id>
+            </Provider_Port>
+          </Provider_Ports>
+          <Requirer_Ports>
+            <Requirer_Port>
+              <Name>Mode_Button_Pressed</Name>
+              <Identifier>e57afd09-2b9d-49b3-bd01-489cb56aec88</Identifier>
               <Description />
               <Referenced_Interface_Id>36530ec3-3e15-4e02-a253-2e472d582bd7</Referenced_Interface_Id>
             </Requirer_Port>
@@ -441,28 +441,32 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
       <Description />
       <Parts>
         <Component_Prototype>
-          <Name>Boiler_Relay_Pin</Name>
-          <Identifier>b02c9557-f7be-4861-855e-264286cc3e52</Identifier>
+          <Name>Display_Manager</Name>
+          <Identifier>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Identifier>
           <Description />
-          <Ref_Component_Type_Id>733f0292-7007-4452-b5e2-961361d0f2ae</Ref_Component_Type_Id>
-          <Configuration_Values>
-            <Configuration_Value>
-              <Configuration_Ref>65966ace-2cea-4484-ae8f-2ae13b4307eb</Configuration_Ref>
-              <Value>13</Value>
-            </Configuration_Value>
-          </Configuration_Values>
+          <Ref_Component_Type_Id>b7ab2cb3-f2c0-4e9e-a40e-a87588c85304</Ref_Component_Type_Id>
+          <Configuration_Values />
         </Component_Prototype>
         <Component_Prototype>
-          <Name>Boiler_Relay_Actuator</Name>
-          <Identifier>5ab5ccf9-be37-4835-a5cd-7228d3369bb1</Identifier>
+          <Name>Boiler_Manager</Name>
+          <Identifier>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Identifier>
           <Description />
-          <Ref_Component_Type_Id>89a8d3a4-38c2-479e-ba35-8eb6019a80ea</Ref_Component_Type_Id>
-          <Configuration_Values>
-            <Configuration_Value>
-              <Configuration_Ref>6cafb7f2-e9a8-4c53-9353-4a9eb60adef7</Configuration_Ref>
-              <Value>MONOSTABLE_RELAY_NORMALLY_OPEN</Value>
-            </Configuration_Value>
-          </Configuration_Values>
+          <Ref_Component_Type_Id>1dbae524-372f-40b1-9fce-c8dc1cf7cb8f</Ref_Component_Type_Id>
+          <Configuration_Values />
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>Mode_Manager</Name>
+          <Identifier>1ec855e7-aa4b-4e1d-a1d3-ec26970c9d47</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>747a08cb-327b-468f-a5f3-cd49faac5b7f</Ref_Component_Type_Id>
+          <Configuration_Values />
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>Setting_Manager</Name>
+          <Identifier>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>c666d3a9-118c-4670-a299-da5a7a52f747</Ref_Component_Type_Id>
+          <Configuration_Values />
         </Component_Prototype>
         <Component_Prototype>
           <Name>Air_Temperature_Sensor</Name>
@@ -472,23 +476,7 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
           <Configuration_Values>
             <Configuration_Value>
               <Configuration_Ref>427b3fa6-85e1-4911-bc61-c07cf3f5d7c6</Configuration_Ref>
-              <Value>[0x28, 0xEE, 0xF4, 0x79, 0xA2, 0x0, 0x3, 0xFD]</Value>
-            </Configuration_Value>
-          </Configuration_Values>
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>One_Wire</Name>
-          <Identifier>f1be4153-7477-4347-a655-daaa96d7e8f0</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>138c2196-b00d-47ff-825e-10551d3f1388</Ref_Component_Type_Id>
-          <Configuration_Values>
-            <Configuration_Value>
-              <Configuration_Ref>5da41097-9196-4e6a-9a13-60872d930ba7</Configuration_Ref>
-              <Value>PIND</Value>
-            </Configuration_Value>
-            <Configuration_Value>
-              <Configuration_Ref>522e7b3c-ecac-43be-8c53-d0c294155781</Configuration_Ref>
-              <Value>6</Value>
+              <Value>[0x28 0xEE 0xF4 0x79 0xA2 0x00 0x03 0xFD]</Value>
             </Configuration_Value>
           </Configuration_Values>
         </Component_Prototype>
@@ -521,6 +509,73 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
           </Configuration_Values>
         </Component_Prototype>
         <Component_Prototype>
+          <Name>HTC_LCD</Name>
+          <Identifier>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>ece83a7f-e8d2-472e-8b71-f7954ef1493b</Ref_Component_Type_Id>
+          <Configuration_Values>
+            <Configuration_Value>
+              <Configuration_Ref>6d728ca3-d7b0-486f-84d5-6fc91b6a8c6c</Configuration_Ref>
+              <Value>LCD_CONFIG_FONT_5x8</Value>
+            </Configuration_Value>
+            <Configuration_Value>
+              <Configuration_Ref>8b302133-3e6d-44d6-a433-e0ec61ea4ea6</Configuration_Ref>
+              <Value>LCD_CONFIG_NB_LINES_2</Value>
+            </Configuration_Value>
+            <Configuration_Value>
+              <Configuration_Ref>3f33e387-6451-4f9a-942c-1e0702ffea16</Configuration_Ref>
+              <Value>LCD_CONFIG_NB_COLUMNS_16</Value>
+            </Configuration_Value>
+          </Configuration_Values>
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>Boiler_Relay_Actuator</Name>
+          <Identifier>5ab5ccf9-be37-4835-a5cd-7228d3369bb1</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>89a8d3a4-38c2-479e-ba35-8eb6019a80ea</Ref_Component_Type_Id>
+          <Configuration_Values>
+            <Configuration_Value>
+              <Configuration_Ref>6cafb7f2-e9a8-4c53-9353-4a9eb60adef7</Configuration_Ref>
+              <Value>MONOSTABLE_RELAY_NORMALLY_OPEN</Value>
+            </Configuration_Value>
+          </Configuration_Values>
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>HTC_Clock</Name>
+          <Identifier>e6a97b30-f9b4-4bd5-ae57-28adb84ec4d5</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>127e3ae9-7752-4f19-b003-78477f9d1ba2</Ref_Component_Type_Id>
+          <Configuration_Values />
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>One_Wire</Name>
+          <Identifier>f1be4153-7477-4347-a655-daaa96d7e8f0</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>138c2196-b00d-47ff-825e-10551d3f1388</Ref_Component_Type_Id>
+          <Configuration_Values>
+            <Configuration_Value>
+              <Configuration_Ref>5da41097-9196-4e6a-9a13-60872d930ba7</Configuration_Ref>
+              <Value>PIND</Value>
+            </Configuration_Value>
+            <Configuration_Value>
+              <Configuration_Ref>522e7b3c-ecac-43be-8c53-d0c294155781</Configuration_Ref>
+              <Value>6</Value>
+            </Configuration_Value>
+          </Configuration_Values>
+        </Component_Prototype>
+        <Component_Prototype>
+          <Name>Boiler_Relay_Pin</Name>
+          <Identifier>b02c9557-f7be-4861-855e-264286cc3e52</Identifier>
+          <Description />
+          <Ref_Component_Type_Id>733f0292-7007-4452-b5e2-961361d0f2ae</Ref_Component_Type_Id>
+          <Configuration_Values>
+            <Configuration_Value>
+              <Configuration_Ref>65966ace-2cea-4484-ae8f-2ae13b4307eb</Configuration_Ref>
+              <Value>13</Value>
+            </Configuration_Value>
+          </Configuration_Values>
+        </Component_Prototype>
+        <Component_Prototype>
           <Name>Keypad_Pin</Name>
           <Identifier>23f7abae-17b0-4e0c-96a4-9101329598dd</Identifier>
           <Description />
@@ -531,20 +586,6 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
               <Value>PIN_A0</Value>
             </Configuration_Value>
           </Configuration_Values>
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>Mode_Manager</Name>
-          <Identifier>1ec855e7-aa4b-4e1d-a1d3-ec26970c9d47</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>747a08cb-327b-468f-a5f3-cd49faac5b7f</Ref_Component_Type_Id>
-          <Configuration_Values />
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>Boiler_Manager</Name>
-          <Identifier>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>1dbae524-372f-40b1-9fce-c8dc1cf7cb8f</Ref_Component_Type_Id>
-          <Configuration_Values />
         </Component_Prototype>
         <Component_Prototype>
           <Name>DO_Pin_LCD_Backlight</Name>
@@ -630,47 +671,6 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
             </Configuration_Value>
           </Configuration_Values>
         </Component_Prototype>
-        <Component_Prototype>
-          <Name>Display_Manager</Name>
-          <Identifier>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>b7ab2cb3-f2c0-4e9e-a40e-a87588c85304</Ref_Component_Type_Id>
-          <Configuration_Values />
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>HTC_Clock</Name>
-          <Identifier>e6a97b30-f9b4-4bd5-ae57-28adb84ec4d5</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>127e3ae9-7752-4f19-b003-78477f9d1ba2</Ref_Component_Type_Id>
-          <Configuration_Values />
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>HTC_LCD</Name>
-          <Identifier>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>ece83a7f-e8d2-472e-8b71-f7954ef1493b</Ref_Component_Type_Id>
-          <Configuration_Values>
-            <Configuration_Value>
-              <Configuration_Ref>6d728ca3-d7b0-486f-84d5-6fc91b6a8c6c</Configuration_Ref>
-              <Value>LCD_CONFIG_FONT_5x8</Value>
-            </Configuration_Value>
-            <Configuration_Value>
-              <Configuration_Ref>8b302133-3e6d-44d6-a433-e0ec61ea4ea6</Configuration_Ref>
-              <Value>LCD_CONFIG_NB_LINES_2</Value>
-            </Configuration_Value>
-            <Configuration_Value>
-              <Configuration_Ref>3f33e387-6451-4f9a-942c-1e0702ffea16</Configuration_Ref>
-              <Value>LCD_CONFIG_NB_COLUMNS_16</Value>
-            </Configuration_Value>
-          </Configuration_Values>
-        </Component_Prototype>
-        <Component_Prototype>
-          <Name>Setting_Manager</Name>
-          <Identifier>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Identifier>
-          <Description />
-          <Ref_Component_Type_Id>c666d3a9-118c-4670-a299-da5a7a52f747</Ref_Component_Type_Id>
-          <Configuration_Values />
-        </Component_Prototype>
       </Parts>
       <Links>
         <Connector>
@@ -708,6 +708,231 @@ The setting mode is modified following the (bidirectional) cycle defined by E_Se
           <Provider_Port_Ref>88675051-4cf8-43a8-bfde-31e9ceaa421d</Provider_Port_Ref>
           <Requirer_Component_Ref>1ec855e7-aa4b-4e1d-a1d3-ec26970c9d47</Requirer_Component_Ref>
           <Requirer_Port_Ref>e57afd09-2b9d-49b3-bd01-489cb56aec88</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_4__Digital_Pin__HTC_LCD__Data_4_Pin</Name>
+          <Identifier>490e75fd-c33f-47f5-a683-71de104cbf60</Identifier>
+          <Description />
+          <Provider_Component_Ref>6a6c831e-bd9f-48c8-9b55-64da2d32adb1</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>52bf39c2-486a-4f13-8877-755e24ab6844</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_5__Digital_Pin__HTC_LCD__Data_5_Pin</Name>
+          <Identifier>9850aba3-608c-42fb-8e8d-67bc30a87087</Identifier>
+          <Description />
+          <Provider_Component_Ref>5d4f8f3d-e111-45cc-8ade-1de303b6b970</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>ac111cb5-66d0-41d2-9411-e056ce5c4136</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_6__Digital_Pin__HTC_LCD__Data_6_Pin</Name>
+          <Identifier>3c99eb18-a030-4749-9cd8-644d24a967cb</Identifier>
+          <Description />
+          <Provider_Component_Ref>6495c563-54d9-40ff-ba7a-14d6e2075dc6</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>6433b86d-c231-44cb-ae16-33638be8c8cb</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_7__Digital_Pin__HTC_LCD__Data_7_Pin</Name>
+          <Identifier>7498def6-b1a5-4e4f-aa96-0cb77984c335</Identifier>
+          <Description />
+          <Provider_Component_Ref>42f2b042-20a9-43f6-a197-7a7128142cc4</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>61383fc8-2fe6-4dee-83a6-a96e5b346a7d</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_Enable__Digital_Pin__HTC_LCD__Enable_Pin</Name>
+          <Identifier>9a6fb31d-426b-4195-b7d8-f9ab02ad4c5a</Identifier>
+          <Description />
+          <Provider_Component_Ref>aa12260e-3250-4159-a870-5828e941e36d</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>e8d82045-42b0-42bc-be64-1b10db59b529</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Backlight__Digital_Pin__HTC_LCD__Backlight_Pin</Name>
+          <Identifier>8b7ed6ea-2003-441b-9b86-1636e3c1f94b</Identifier>
+          <Description />
+          <Provider_Component_Ref>95cfbb15-45e1-4be2-9786-265492ca9dad</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>c6e018b5-19b1-4317-b25c-4fb5433c3ca2</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>DO_Pin_LCD_Data_Register_Select__Digital_Pin__HTC_LCD__Register_Select_Pin</Name>
+          <Identifier>09a79954-58a6-4cda-9de0-8b11e74c651a</Identifier>
+          <Description />
+          <Provider_Component_Ref>f829175e-4395-4fe8-b742-6b4f1d694cf6</Provider_Component_Ref>
+          <Provider_Port_Ref>e7f6d6b6-0128-4fb0-9c9e-0fa6a3f4074b</Provider_Port_Ref>
+          <Requirer_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Requirer_Component_Ref>
+          <Requirer_Port_Ref>a3f9f8dd-7de1-4c2e-83f4-c78b56ba60ed</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Clock__Data__Boiler_Manager__Clock</Name>
+          <Identifier>2944b9f6-560d-4b73-a8e3-a40305c0a66a</Identifier>
+          <Description />
+          <Provider_Component_Ref>e6a97b30-f9b4-4bd5-ae57-28adb84ec4d5</Provider_Component_Ref>
+          <Provider_Port_Ref>36210882-4993-4f88-8213-b9dd701e0383</Provider_Port_Ref>
+          <Requirer_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Requirer_Component_Ref>
+          <Requirer_Port_Ref>ef193519-a449-433c-869d-2a29c9ef6148</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Air_Temperature_Sensor__Measure__Boiler_Manager__Mesured_Temperature</Name>
+          <Identifier>3d6e6084-50f2-46ca-90ac-5ce3c4a71804</Identifier>
+          <Description />
+          <Provider_Component_Ref>77d06f00-9819-48e4-95ad-09bc7d04813d</Provider_Component_Ref>
+          <Provider_Port_Ref>daa033bf-cbe3-4d80-9d14-1c2b61b4022b</Provider_Port_Ref>
+          <Requirer_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Requirer_Component_Ref>
+          <Requirer_Port_Ref>7a451f2e-a618-46f9-8c44-1ecaf741ab87</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Boiler_Relay_Actuator__Command__Boiler_Manager__Relay_Cmd</Name>
+          <Identifier>38ff7e45-6c46-438f-acba-4b2547ec690e</Identifier>
+          <Description />
+          <Provider_Component_Ref>5ab5ccf9-be37-4835-a5cd-7228d3369bb1</Provider_Component_Ref>
+          <Provider_Port_Ref>67691c85-e4d3-4eca-8277-63b11eb3dfcf</Provider_Port_Ref>
+          <Requirer_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Requirer_Component_Ref>
+          <Requirer_Port_Ref>dfeab363-0997-49a6-b13c-902034e75f6a</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Mode_Manager__Operating_Mode__Boiler_Manager__Mode</Name>
+          <Identifier>9acd581e-4c22-45a1-92ac-17c7821e8f17</Identifier>
+          <Description />
+          <Provider_Component_Ref>1ec855e7-aa4b-4e1d-a1d3-ec26970c9d47</Provider_Component_Ref>
+          <Provider_Port_Ref>e14c369b-5c14-4240-973c-3978708715d8</Provider_Port_Ref>
+          <Requirer_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Requirer_Component_Ref>
+          <Requirer_Port_Ref>ae047d27-b686-4e36-82d1-2ede723164f4</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Keypad__Any_Button_Pressed__Display_Manager__Keypad_Used</Name>
+          <Identifier>daacacff-7991-415e-af16-bed338962d46</Identifier>
+          <Description />
+          <Provider_Component_Ref>4f3e8fee-e7e5-43f4-aaaa-d0e9d19a6646</Provider_Component_Ref>
+          <Provider_Port_Ref>e3a6d197-3867-46b5-a97a-81c5afdbdfeb</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>ae763ab9-d0f4-4904-8b7b-501bc80df390</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Clock__Data__Display_Manager__Clock</Name>
+          <Identifier>24261f3d-26c0-412c-9b18-a6780713bb8a</Identifier>
+          <Description />
+          <Provider_Component_Ref>e6a97b30-f9b4-4bd5-ae57-28adb84ec4d5</Provider_Component_Ref>
+          <Provider_Port_Ref>36210882-4993-4f88-8213-b9dd701e0383</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>672fac31-015b-4138-80e5-43429adf3e1a</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Setting_Manager__Setting_Mode__Display_Manager__Setting_Mode</Name>
+          <Identifier>47ca6ef7-216d-47fe-a97e-ff63b9aa58a5</Identifier>
+          <Description />
+          <Provider_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Provider_Component_Ref>
+          <Provider_Port_Ref>d403ddaf-b11a-4e83-aead-96e3d08141d6</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>6edba07d-5437-4497-a21a-338f91221b3c</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_LCD__Commands__Display_Manager__LCD_Cmd</Name>
+          <Identifier>bd50452d-4ace-4874-8618-7accc7f45e36</Identifier>
+          <Description />
+          <Provider_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Provider_Component_Ref>
+          <Provider_Port_Ref>c3ca426c-d54c-44a4-bc6a-a26517cdaa23</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>6c3e1a01-21ef-4f2b-b182-f1c43a8785c7</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_LCD__Special_Character_Config__Display_Manager__LCD_Config</Name>
+          <Identifier>a70e281f-5f5a-40ae-989e-8e80d35d1d2b</Identifier>
+          <Description />
+          <Provider_Component_Ref>4095abc7-c0bc-41ad-87eb-40821d9f09ea</Provider_Component_Ref>
+          <Provider_Port_Ref>b1308683-8b39-4400-9aee-b3bd4c2575b2</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>7cfa975b-6393-4830-8785-a2f80abdafa8</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Air_Temperature_Sensor__Measure__Display_Manager__Mesured_Temperature</Name>
+          <Identifier>0e38d92e-931c-43a7-9f52-ac5a7f260ae7</Identifier>
+          <Description />
+          <Provider_Component_Ref>77d06f00-9819-48e4-95ad-09bc7d04813d</Provider_Component_Ref>
+          <Provider_Port_Ref>daa033bf-cbe3-4d80-9d14-1c2b61b4022b</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>229d62f1-e3fc-456e-bc28-b3ef43bc6234</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Mode_Manager__Operating_Mode__Display_Manager__Operating_Mode</Name>
+          <Identifier>47f072bb-7f49-4501-a318-78afda65b0cf</Identifier>
+          <Description />
+          <Provider_Component_Ref>1ec855e7-aa4b-4e1d-a1d3-ec26970c9d47</Provider_Component_Ref>
+          <Provider_Port_Ref>e14c369b-5c14-4240-973c-3978708715d8</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>b24d5354-7cef-4814-a1e4-e4706319d821</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Boiler_Manager__Temperatures__Display_Manager__Target_Temperatures</Name>
+          <Identifier>59fdf303-1d82-4de4-9d44-96c085e5d165</Identifier>
+          <Description />
+          <Provider_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Provider_Component_Ref>
+          <Provider_Port_Ref>d65ab246-d0e5-4558-a9e8-20147dce3395</Provider_Port_Ref>
+          <Requirer_Component_Ref>5c5fa4e2-ca1b-429a-8743-70cc1bd71a39</Requirer_Component_Ref>
+          <Requirer_Port_Ref>431f0fc9-f08c-4091-a5c5-a3cee0548fd5</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Clock__Setting__Setting_Manager__Clock_Setting</Name>
+          <Identifier>63bd6550-da00-41b1-b824-745564d380ad</Identifier>
+          <Description />
+          <Provider_Component_Ref>e6a97b30-f9b4-4bd5-ae57-28adb84ec4d5</Provider_Component_Ref>
+          <Provider_Port_Ref>38f233e4-6ef8-4eb5-9bc2-44a3fcf86713</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>b808e8aa-50d9-45b2-acd3-f9f2b77b4e4d</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>Boiler_Manager__Temperatures_Setting__Setting_Manager__Temperature_Setting</Name>
+          <Identifier>76ee9e53-6ea4-46c1-aafa-7e3124af1fb3</Identifier>
+          <Description />
+          <Provider_Component_Ref>f80a81ee-80c7-42c2-893f-f2ca11ab230b</Provider_Component_Ref>
+          <Provider_Port_Ref>5cded3b0-8f79-41b9-b600-6cd7495cbd92</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>10872725-abe7-454a-b680-9cd1ba5b2850</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Keypad__Up_Button_Pressed__Setting_Manager__Increase_Setting_Button_Pressed</Name>
+          <Identifier>8665aa7f-e927-4f08-8b3d-7220201c5521</Identifier>
+          <Description />
+          <Provider_Component_Ref>4f3e8fee-e7e5-43f4-aaaa-d0e9d19a6646</Provider_Component_Ref>
+          <Provider_Port_Ref>10244efb-9ded-4a4e-a92e-14e29408bf7d</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>0bb8b662-87c3-4918-9158-58288a12289f</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Keypad__Down_Button_Pressed__Setting_Manager__Decrease_Setting_Button_Pressed</Name>
+          <Identifier>1c464e68-cc0a-4201-ae2c-9857bc92acc7</Identifier>
+          <Description />
+          <Provider_Component_Ref>4f3e8fee-e7e5-43f4-aaaa-d0e9d19a6646</Provider_Component_Ref>
+          <Provider_Port_Ref>6453339d-806f-4cbf-9bf2-76ab803793c8</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>d5081222-88bc-4acb-836f-1b0669f496bf</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Keypad__Right_Button_Pressed__Setting_Manager__Next_Setting_Button_Pressed</Name>
+          <Identifier>f247efe2-7f4f-4cea-9edc-3f2a85e2df60</Identifier>
+          <Description />
+          <Provider_Component_Ref>4f3e8fee-e7e5-43f4-aaaa-d0e9d19a6646</Provider_Component_Ref>
+          <Provider_Port_Ref>f8e54719-c714-4766-9841-c192df78abe2</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>7dc9d8e3-a7c9-4afd-b211-c32ccec3ad8b</Requirer_Port_Ref>
+        </Connector>
+        <Connector>
+          <Name>HTC_Keypad__Left_Button_Pressed__Setting_Manager__Previous_Setting_Button_Pressed</Name>
+          <Identifier>b9cca0fe-113c-4d95-9321-542c36f65253</Identifier>
+          <Description />
+          <Provider_Component_Ref>4f3e8fee-e7e5-43f4-aaaa-d0e9d19a6646</Provider_Component_Ref>
+          <Provider_Port_Ref>718f6e98-1dc7-4c23-9f63-fb6d542e918a</Provider_Port_Ref>
+          <Requirer_Component_Ref>93854c1a-04c8-4aa6-b0f2-43c291fddda8</Requirer_Component_Ref>
+          <Requirer_Port_Ref>1045042c-0cc6-4c20-98c5-5e28353b5633</Requirer_Port_Ref>
         </Connector>
       </Links>
       <Tasks>
